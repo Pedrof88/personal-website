@@ -1,0 +1,45 @@
+.info {
+    background-color: $color-tertiary;
+    padding: 8rem;
+    overflow: auto;
+
+    @media only screen and (max-width: $bp-large) {
+        padding: 4rem;
+    }
+
+    display:grid;
+    justify-content: center;
+    align-items: start;
+    grid-template-columns: minmax(min-content, max-content);
+    grid-row-gap: 1.5rem;
+
+    &__block {
+        display: grid;
+        grid-row-gap: 2rem;
+    }
+
+    &__heading {
+        justify-self: start;
+        border-bottom: 2px solid $color-secondary;
+
+        @media only screen and (max-width: $bp-medium) {
+            &:not(:last-child) {
+                margin-bottom: .5rem;
+            }
+        }
+    }
+
+    &__content {
+        font-size: 1.6rem;
+
+        @media only screen and (max-width: $bp-medium) {
+                margin-bottom: 2rem;
+        }
+    }
+
+    &__date {
+        font-style: italic;
+        color: $color-secondary;
+        margin-right: 10px;
+    }
+}

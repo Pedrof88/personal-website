@@ -1,0 +1,54 @@
+.header {
+    background-color: $color-primary;
+    background-image: linear-gradient(rgba(38, 38, 38, 0.96), rgba(38, 38, 38, 0.96)), url(../img/header.jpeg);
+    background-size: cover;
+    background-position: center;
+    padding: 8rem;
+
+    @media only screen and (max-width: $bp-large) {
+        padding: 4rem;
+    }
+
+    display:grid;
+    justify-content: center;
+    grid-template-columns: minmax(min-content, max-content);
+    grid-row-gap: 1.5rem;
+
+    &__main {
+        align-self: end;
+    }
+
+    &__link:link,
+    &__link:visited {
+        backface-visibility: hidden;
+        font-family: $font-primary;
+        color: $color-tertiary;
+        font-size: 2rem;
+        text-decoration: none;
+        font-family: $font-display;
+        padding: 1.5rem 3rem;
+        border-bottom: 1px solid $color-primary;
+        transition: all .3s;
+        
+        align-self: start;
+        justify-self: center;
+    }
+
+    &__link:hover,
+    &__link:active { 
+        border-bottom: 1px solid $color-secondary;
+        transform: scale(1.1);
+    }
+
+    &__link:focus {
+        transform: translateY(-3px);
+    }
+
+    &__link-icon {
+        fill: $color-tertiary;
+        width: 2rem;
+        height: 2rem;
+        margin-left: 2rem;
+        transform: translateY(.2rem);
+    }
+}
